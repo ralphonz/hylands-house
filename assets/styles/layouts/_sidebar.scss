@@ -1,0 +1,129 @@
+.sidebar {
+  padding-left: ($spacer*2);
+  padding-right: ($spacer*2);
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: $spacer;
+  } 
+}
+.sidebar .widget {
+  padding: ($spacer*2) $spacer;
+  border-bottom: 1px solid $blue--dark;
+  &:last-of-type {
+    border-bottom: none;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  img {
+    max-width: 100%;
+    height:auto;
+  }
+  
+  @include media-breakpoint-up(md) {
+    width: 33%;
+    border-bottom: none;
+    padding-top: 0;
+    padding-bottom: $spacer;
+
+    .textwidget {
+      font-size:em(18);
+      tel {
+        font-size: em(28, 18);
+      }
+      address {
+        line-height: 1.75;
+      }
+    }
+  } 
+  @include media-breakpoint-up(lg) {
+    width: 25%;
+  }
+}
+.widget {
+  h3 {
+    font-weight: normal;
+  }
+
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+}
+.contact-widget {
+  @include media-breakpoint-up(md) {
+    float: right;
+    width: 33%;
+    margin-left: ($spacer * 3);
+    margin-right: $spacer;
+    text-align: right;
+    &:first-of-type {
+      padding-top: 0;
+    }
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+    .widget {
+      width: 100%;
+    }
+  }
+  .textwidget {
+    address {
+      position: relative;
+      top: -1em;
+      line-height: 1.25;
+    } 
+  }  
+}
+
+//Built-in widgets
+#wp-calendar {
+  width: 100%;
+}
+//Care quality commision widget
+.sidebar div.cqc-widget .cqc-container, .sidebar div.cqc-widget {
+  background: none !important;
+  border: none !important;
+}
+//recent posts widget extended
+.rpwe-title {
+  margin: .5em;
+  font-family: $heading-font;
+  font-weight: 300;
+  a {
+    color: $purple;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.rpwe-block {
+  overflow: hidden;
+
+  @include media-breakpoint-up(md) {
+    max-height: 225px;
+    .rpwe-img {
+      display: block;
+      text-align: center;
+      float: left;
+      margin-right: $spacer;
+    }
+    img.rpwe-thumb {
+      max-height: 120px;
+      width: auto;
+    }
+  }
+}
+.rpwe-summary {
+  margin: .5em;
+  font-size: em(14);
+
+  @include media-breakpoint-up(md) {
+    margin: 0;
+  }
+}

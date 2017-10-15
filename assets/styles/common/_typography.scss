@@ -1,0 +1,33 @@
+h1, h2, h3, h4, h5, h6 {
+  color: $blue--dark;
+}
+h1 {
+  font-size: em(20);
+  font-weight: 300;
+  @include media-breakpoint-up(md) {
+    font-size: em(34);
+  }
+}
+h2 {
+  font-family: $heading-font;
+  font-size: em(28);
+  font-weight: 300;
+}
+h3 {
+  font-family: $heading-font;
+  font-size: em(20);
+}
+.main p {
+  font-size: em(14);
+  line-height: em(24, 14);
+  margin-bottom: ($spacer * 2);
+
+  @include media-breakpoint-up(md) {
+    font-size: em(16);
+    line-height: em(30);
+  }
+}
+tel {
+  font-size: em(28);
+  color: $purple;
+}

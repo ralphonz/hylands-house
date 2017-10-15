@@ -1,0 +1,85 @@
+// WordPress Generated Classes
+// http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+
+// Media alignment
+.alignnone {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  height: auto;
+}
+.aligncenter {
+  display: block;
+  margin: ($spacer / 1.5) auto;
+  height: auto;
+  max-width: 100%;
+}
+.alignleft,
+.alignright {
+  margin-bottom: ($spacer / 1.5);
+  height: auto;
+  max-width: 100%;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: $spacer;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-bottom: ($spacer * 1.5);
+  }
+}
+.alignleft {
+  float: left;
+  margin-right: ($spacer / 1.5);
+
+  @include media-breakpoint-up(md) {
+    margin-right: $spacer;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-right: ($spacer * 2);
+  }
+
+}
+.alignright {
+  float: right;
+  margin-left: ($spacer / 2);
+
+  @include media-breakpoint-up(md) {
+    margin-left: $spacer;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-left: ($spacer * 2);
+  }
+}
+
+@include media-breakpoint-down(md) {
+  //shrink images on mobiles
+  .alignnone.size-medium, .aligncenter.size-medium, .alignleft.size-medium, .alignright.size-medium {
+    max-width: 55%;
+  }
+}
+
+// Captions
+.wp-caption {
+  @extend .figure;
+}
+.wp-caption > img {
+  @extend .figure-img;
+  @extend .img-fluid;
+}
+.wp-caption-text {
+  @extend .figure-caption;
+}
+.wp-caption-text {
+  @extend .figure-caption;
+}
+
+// Text meant only for screen readers
+.screen-reader-text {
+  @extend .sr-only;
+  @extend .sr-only-focusable;
+}
+
+//Keep theme check happy
+.bypostauthor {
+  font-family: $heading-font;
+}

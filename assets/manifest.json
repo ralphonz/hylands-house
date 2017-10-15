@@ -1,0 +1,39 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "login.css": {
+      "files": [
+        "styles/login.scss"
+      ],
+      "main": true
+    },
+    "admin.css": {
+      "files": [
+        "styles/admin.scss"
+      ],
+      "main": true
+    },
+    "customizer.js": {
+      "files": [
+        "scripts/customizer.js"
+      ]
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    }
+  },
+  "config": {
+    "devUrl": "http://hylandshouse.dev"
+  }
+}

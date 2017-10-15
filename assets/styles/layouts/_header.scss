@@ -1,0 +1,31 @@
+.banner {
+  background-color: $blue--dark;
+  padding-top: $spacer;
+  padding-bottom: $spacer;
+  position: relative ;
+}
+
+.brand {
+  // display: block;
+  font: $branding-font;
+  line-height: .875;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  color: $blue--light;
+
+  @include media-breakpoint-up(md) {
+    font-size: em(38);
+  }
+}
+.tagline {
+  display: block;
+  padding-left: 2em;
+  font-size: em(20, 36);
+  color: $blue;
+
+  @include media-breakpoint-up(md){
+    display: inline-block;
+    padding-left: 0;
+    font-size: em(21, 36);
+  }
+}

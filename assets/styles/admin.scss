@@ -1,0 +1,15 @@
+
+#wp-admin-bar-wp-logo {
+  display: none;
+} 
+#adminmenu .wp-submenu, #adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap, #wpadminbar .ab-top-menu > li.hover > .ab-item, #wpadminbar.nojq .quicklinks .ab-top-menu > li > .ab-item:focus,
+#wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item, #wpadminbar:not(.mobile) .ab-top-menu > li > .ab-item:focus, #adminmenu .wp-has-current-submenu .wp-submenu {
+  background-color: rgb(15,29,73);
+  color: #fff;
+}
+#wpadminbar, #wpadminbar .menupop .ab-sub-wrapper {
+  background-color: lighten(rgb(15,29,73), 5%);
+}
+#adminmenu li.menu-top:hover, #adminmenu li.opensub>a.menu-top  {
+  background-color: darken(rgb(15,29,73), 5%);
+}

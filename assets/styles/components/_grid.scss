@@ -1,0 +1,7 @@
+// Grid system
+.main {
+  @include make-col-ready();
+}
+.sidebar {
+  @include make-col-ready();
+}

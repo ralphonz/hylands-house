@@ -1,0 +1,27 @@
+body {
+  font-family:  'Helvetica', Arial, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  background-color: $blue--dark;
+}
+.wrap {
+  background: $white;
+}
+.content {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  min-height:100vh;
+
+  @include media-breakpoint-up(xl) {
+    width: 76.41vw;
+    margin: 0 auto;
+  }
+}
+.pagefade {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+.banner-out {
+  transition:all 0.4s ease;
+  background-color: #fff;
+}

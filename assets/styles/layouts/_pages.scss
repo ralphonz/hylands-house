@@ -1,0 +1,63 @@
+.page {
+  .hero-image {
+    position: relative;
+    left: -15px;
+    width: 100vw;
+    height: 75vh;
+    overflow: hidden;
+    img {
+      width: 100vw;
+      height: auto;
+    }
+
+    @include media-breakpoint-up(xl) {
+      left: calc(-11.795vw - 15px);
+    }
+  }
+  .main {
+    h2 {
+      font-size: em(20);
+      color: $blue;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .entry-content {
+      padding-left: $spacer;
+      padding-right: $spacer;
+    }
+  }
+}
+.page-header {
+  margin-top: $spacer;
+  margin-bottom: $spacer;
+  border-bottom: 1px solid $blue--dark;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: ($spacer * 2);
+    margin-left: $spacer;
+    margin-right: $spacer;
+    text-align: left;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: ($spacer * 2);
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: ($spacer * 2);
+  }
+}
+
+.jarallax {
+    position: relative;
+    z-index: 0;
+}
+.jarallax > .jarallax-img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}

@@ -1,0 +1,11 @@
+.btn {
+  font-weight: bold;
+  padding: $spacer;
+  border-radius: $spacer;
+  transition: .5s ease;
+
+  a:hover, &:hover {
+    text-decoration: none;
+    color: $blue--light;
+  }
+}

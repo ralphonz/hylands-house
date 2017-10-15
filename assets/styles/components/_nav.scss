@@ -1,0 +1,223 @@
+nav a {
+  color: $white;
+  transition: color .5s ease;
+  &:hover {
+    color: $blue;
+    text-decoration: none;
+  }
+}
+
+.navbar {
+  padding: 0;
+  font-family: "Cormorant Garamond", serif;
+  li {
+    padding: .25em .75em;
+    text-align: center;
+  }
+  .current-menu-item a {
+    color: lighten($purple, 25%);
+  }
+  .navbar-nav {
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      padding-bottom: 0;
+      justify-content: flex-end;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-top: em(16, 18);
+    }
+  }
+  .navbar-collapse {
+    @include media-breakpoint-up(lg) {
+      flex-basis: 50%; 
+    }
+    @include media-breakpoint-up(xl) {
+      flex-basis: 67.5%;
+      font-size: em(18);
+    }
+  }
+}
+
+.navbar-dark .navbar-toggler {
+  color: $white;
+  border: none;
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+
+  @include media-breakpoint-up(lg){
+    display: none;
+  }
+}
+
+.menu-buttons-container {
+  width: 100vw;
+  position: relative;
+  left: -15px;
+  clear: both;
+  margin-top:  ($spacer * 2);
+  margin-bottom: ($spacer * 2);
+  padding: 2em;
+  background-color: $grey--light;
+
+  ul {
+    list-style: none;
+    justify-content: space-around;
+  }
+  .nav-item:nth-child(1n+1) {
+    background-color: $blue--dark;
+  }
+  .nav-item:nth-child(2n+2) {
+    background-color: $blue;
+  }
+  .nav-item:nth-child(3n+3) {
+    background-color: $purple;
+  }
+  @include media-breakpoint-up(md) {
+    margin-top:  ($spacer * 3);
+    margin-bottom: ($spacer * 3);
+  }
+  @include media-breakpoint-up(xl) {
+    left: calc(-11.795vw - 15px);
+  }
+}
+
+.nav-pills {
+  flex-direction: column;
+
+  .nav-item {
+    @extend .btn;
+    width:100%;
+    margin-bottom: ($spacer * 2);
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @include media-breakpoint-up(md) {
+      width: 25%;
+      margin-bottom: 0;
+      font-size: em(20);
+    }
+    @include media-breakpoint-up(lg) {
+      width: 22.5%;
+      padding-top: ($spacer * 1.25);
+      padding-bottom: ($spacer * 1.25);
+    }
+  }
+  a {
+    color: $white;
+  }
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: 76.41%;
+    margin: 0 auto;
+  }
+}
+
+.newsletter-navigation {
+  .arrow {
+    display: none;
+  }
+  h3 {
+    display: none;
+  }
+  select {
+    width: 100%;
+    margin-bottom: ($spacer * 2);
+  }
+  @include media-breakpoint-up(md) {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100vw;
+    position: relative;
+    left: -15px;
+    margin-bottom: ($spacer *2 );
+    padding: $spacer ($spacer * 2) ($spacer * 2);
+    background-color: $grey--light;
+    .arrow {
+      display: inline-block;
+      width: 19px;
+      height: 37px;
+      cursor: pointer;
+      margin-top: em(22);
+    }
+    .prev-arrow {
+      margin-right: .5em;
+    }
+    .next-arrow {
+      margin-left: .5em;
+      transform: rotate(180deg);
+    }
+    ul.nav {
+      display: inline-flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      margin: 0;
+      &:-webkit-scrollbar {
+        display:none;
+      }
+      li {
+        width: 25vw;
+        margin-right: ($spacer * 1.75);
+        padding-left: ($spacer * 3);
+        padding-right: ($spacer * 3);
+        background-color: $blue;
+
+        ul {
+          padding: 0;
+          overflow: hidden;
+        }
+
+        @include media-breakpoint-up(lg) {
+          width: 26.3vw;
+        }
+        @include media-breakpoint-up(xl) {
+          width: 22.7vw;
+        }
+      }
+      .archive-year {
+        width: auto;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        font-family: $heading-font;
+        font-weight: 300;
+        color: $grey;
+      }
+      .nav-item {
+        &:hover {
+          background-color: darken($blue, 10%);
+        }
+        &.active {
+          background-color: $blue--dark;
+          &:hover {
+            background-color: darken($blue--dark, 10%);
+          }
+        }
+      }
+    }
+    &>ul.nav {
+      width: 92%;
+    }
+    @include media-breakpoint-up(lg) {
+      text-align: center;
+      .nav {
+        text-align: left;
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      left: calc(-11.795vw - 15px);
+    }
+  }
+}

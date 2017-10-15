@@ -1,0 +1,42 @@
+.post {
+  header {
+    margin-bottom: $spacer;
+    border-bottom: 1px solid $blue--dark;
+    .entry-title {
+      margin-right: 1.75em;
+      a {
+        color: $blue--dark;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    time {
+      float: right;
+      margin-top: em(-34, 18);
+      font-size: em(18);
+      font-family: $heading-font;
+      font-weight: 300;
+      color: $grey;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .featured-image {
+      width: 100%;
+      margin-bottom: $spacer;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    padding-left: $spacer;
+    padding-right: $spacer;
+    .featured-image {
+      margin-right: ($spacer * 1.5);
+    }
+  }  
+}

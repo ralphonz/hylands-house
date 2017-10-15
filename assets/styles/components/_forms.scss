@@ -1,0 +1,139 @@
+input, .nf-element {
+  padding: ($spacer / 1.5) $spacer;
+
+  @include media-breakpoint-up(xl) {
+    font-size: em(22);
+    padding: $spacer ($spacer * 1.5);
+  }
+}
+input[type="submit"], input[type="button"] {
+  @extend .btn;
+  background-color: $blue--dark;
+  color: $white;
+}
+// Search form
+.search-form {
+  @extend .form-inline;
+}
+.search-form label {
+  font-weight: normal;
+  @extend .form-group;
+  width: 100%;
+}
+.search-form .search-field {
+  @extend .form-control;
+}
+.search-form .search-submit {
+  width: 100%;
+}
+
+select {
+  max-width: 100%;
+}
+
+
+//Ninja forms
+.nf-element {
+  @extend .form-control;
+}
+.main .nf-form-cont {
+  @extend .clearfix;
+  width: 100vw;
+  margin-left: -15px;
+  clear: both;
+  padding: ($spacer * 2);
+  background-color: $grey--light;
+
+  .ninja-forms-field {
+    border: none;
+    border-radius: ($spacer / 2);
+  }
+  .nf-field-element {
+    text-align: center;
+  }
+  input[type="button"].ninja-forms-field {
+    padding-left: ($spacer * 2);
+    padding-right: ($spacer * 2);
+    border-radius: $spacer;
+  }
+  .nf-form-title {
+    display: block;
+    margin-bottom: ($spacer * 2);
+    text-align: center;
+    h3 {
+      font-weight: normal;
+      font-size: em(22);
+      color: $grey;
+      letter-spacing: -0.05em;
+    }
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 72.41vw;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .nf-form-fields-required {
+    display: none;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .one-half, .one-third, .two-thirds {
+      width: 100%;
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    margin-left: -30px;
+    padding-left: ($spacer * 4);
+    padding-right: ($spacer * 4);
+    .nf-form-content {
+      position: relative;
+    }
+    .nf-field-container.textarea-container {
+      position: absolute;
+      right:0;
+
+      textarea {
+        height: 174px;
+
+        @include media-breakpoint-up(xl) {
+          height: 228px;
+        }
+      }
+    }
+    .nf-after-field {
+      position: absolute;
+      left: ($spacer / 4);
+      font-size: em(12);
+      line-height: .75;
+    }
+    .submit-container {
+      margin-top: 12px;
+    }
+    .submit-wrap .nf-field-element {
+      text-align: right;
+    }
+    .nf-form-errors {
+      float: left;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    margin-top: ($spacer * 4);
+    margin-left: calc(-11.795vw - 30px);
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .nf-form-wrap {
+    width: 72.41vw;
+    margin: 0 auto;
+  }
+}

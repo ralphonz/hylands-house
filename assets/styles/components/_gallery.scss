@@ -1,0 +1,25 @@
+.gallery {
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @include media-breakpoint-up(sm){
+    display: flex;
+    flex-wrap: wrap;
+
+    figure {
+      padding: 0 .5em;
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+      &:last-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+}
+.gallery-caption {
+  font-family: $heading-font;
+}

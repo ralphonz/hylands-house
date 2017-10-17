@@ -115,10 +115,14 @@
 
         if (windowWidth >= 575) {
           //gallery flex - calculate aspect ratio and return as flex-grow in flex shorthad property
-          $('.gallery-item').each(function(){
-            var value = $("img", this).width() / $("img", this).height();
-            $(this).css("flex", value + ' 1 0%');
+          $('.gallery').imagesLoaded( function() {
+            // images have loaded
+            $('.gallery-item').each(function(){
+              var value = $("img", this).width() / $("img", this).height();
+              $(this).css("flex", value + ' 1 0%');
+            });
           });
+          
         }
 
         //Bootstrap collapse menu for smaller devices

@@ -34,7 +34,7 @@
 
     .textwidget {
       font-size:em(18);
-      tel {
+      a[href^="tel:"] {
         font-size: em(28, 18);
       }
       address {
@@ -90,40 +90,17 @@
   background: none !important;
   border: none !important;
 }
-//recent posts widget extended
-.rpwe-title {
-  margin: .5em;
-  font-family: $heading-font;
-  font-weight: 300;
-  a {
+.recent_posts_with_excerpts {
+  h3 {
     color: $purple;
-    &:hover {
-      text-decoration: none;
-    }
   }
-}
-.rpwe-block {
-  overflow: hidden;
-
-  @include media-breakpoint-up(md) {
-    max-height: 225px;
-    .rpwe-img {
-      display: block;
-      text-align: center;
-      float: left;
-      margin-right: $spacer;
-    }
-    img.rpwe-thumb {
-      max-height: 120px;
-      width: auto;
-    }
+  blockquote {
+    font-size: em(12);
   }
-}
-.rpwe-summary {
-  margin: .5em;
-  font-size: em(14);
-
-  @include media-breakpoint-up(md) {
-    margin: 0;
+  .btn {
+    display: block;
+    margin: ($spacer / 2) auto 0;
+    padding-top: ($spacer / 1.5);
+    padding-bottom: ($spacer / 1.5);    // background-color: $purple;
   }
 }

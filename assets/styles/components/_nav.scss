@@ -69,12 +69,21 @@ nav a {
   }
   .nav-item:nth-child(1n+1) {
     background-color: $blue--dark;
+    &:hover {
+      background-color: darken($blue--dark, 10%); 
+    }
   }
   .nav-item:nth-child(2n+2) {
     background-color: $blue;
+    &:hover {
+      background-color: darken($blue, 10%); 
+    }
   }
   .nav-item:nth-child(3n+3) {
     background-color: $purple;
+    &:hover {
+      background-color: darken($purple, 10%); 
+    }
   }
   @include media-breakpoint-up(md) {
     margin-top:  ($spacer * 3);

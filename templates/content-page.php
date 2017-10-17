@@ -7,6 +7,7 @@ if (has_nav_menu('button_navigation') && !is_page_template('template-contact.php
   wp_nav_menu([
     'theme_location' => 'button_navigation', 
     'menu_class' => 'nav nav-pills', 
+    'container_class' => 'menu-buttons-container',
   ]);
 endif;
 ?>

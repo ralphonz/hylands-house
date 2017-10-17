@@ -52,7 +52,7 @@ function change_post_label() {
     global $menu;
     global $submenu;
     $menu[5][0] = 'Newsletters';
-    $submenu['edit.php'][5][0] = 'Newsletter';
+    $submenu['edit.php'][5][0] = 'Newsletters';
     $submenu['edit.php'][10][0] = 'Add Newsletter';
     $submenu['edit.php'][16][0] = 'Newsletter Tags';
 }
